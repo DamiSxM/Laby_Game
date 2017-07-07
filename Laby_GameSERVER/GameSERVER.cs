@@ -1,20 +1,20 @@
-﻿using System.Windows.Forms;
-using System.Drawing;
+﻿using System.Drawing;
+using System.Windows.Forms;
 using Laby_Interfaces;
 using Laby_Maze;
 using Laby_Affichage;
 using Laby_Reseau;
 using Laby_Gestion;
 
-namespace Laby_Game
+namespace Laby_GameSERVER
 {
-    public partial class Game : Form
+    public partial class GameSERVER : Form
     {
         Maze Labyrinthe;
         LabyPanel Affichage;
         Reseau Liaison;
         Gestion Gestion;
-        public Game()
+        public GameSERVER()
         {
             InitializeComponent();
 
@@ -24,7 +24,7 @@ namespace Laby_Game
             Affichage.Location = new Point(0, 0);
             Controls.Add(Affichage);
 
-            Liaison = new Reseau();
+            Liaison = new Reseau(Etat.SERVER);
 
             Gestion = new Gestion(Labyrinthe, Affichage, Liaison);
         }

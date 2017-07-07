@@ -33,18 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Laby_Interfaces">
-      <HintPath>..\..\Laby_Interfaces\Laby_Interfaces\bin\Debug\Laby_Interfaces.dll</HintPath>
-    </Reference>
-    <Reference Include="Laby_Maze">
-      <HintPath>..\..\Laby_Maze\Laby_Maze\bin\Debug\Laby_Maze.dll</HintPath>
-    </Reference>
-    <Reference Include="Laby_Reseau">
-      <HintPath>..\..\Laby_Reseau\Laby_Reseau\bin\Debug\Laby_Reseau.dll</HintPath>
-    </Reference>
-    <Reference Include="Laby_WinForm">
-      <HintPath>..\..\Laby_WinForm\Laby_WinForm\bin\Debug\Laby_WinForm.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -612,6 +600,22 @@
     <ProjectReference Include="..\..\Laby_Gestion\Laby_Gestion\Laby_Gestion.csproj">
       <Project>{1843dfc4-ddf7-4768-a106-107a6936ae7a}</Project>
       <Name>Laby_Gestion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Laby_Interfaces\Laby_Interfaces\Laby_Interfaces.csproj">
+      <Project>{e7c638ef-eafb-4880-8258-d6da5b9886fb}</Project>
+      <Name>Laby_Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Laby_Maze\Laby_Maze\Laby_Maze.csproj">
+      <Project>{f7398ec8-8f7a-42dd-a5b3-02fa1d1d58b1}</Project>
+      <Name>Laby_Maze</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Laby_Reseau\Laby_Reseau\Laby_Reseau.csproj">
+      <Project>{88cbcecd-e943-4218-b0b2-da4e0baf14a4}</Project>
+      <Name>Laby_Reseau</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Laby_WinForm\Laby_WinForm\Laby_WinForm.csproj">
+      <Project>{a2c0ed9c-dccc-499b-916c-b6fdc4cc2ca7}</Project>
+      <Name>Laby_WinForm</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
