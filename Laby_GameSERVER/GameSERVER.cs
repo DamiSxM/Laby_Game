@@ -34,25 +34,25 @@ namespace Laby_GameSERVER
             switch (e.KeyCode)
             {
                 case Keys.Left:
-                    Affichage.PersoMove(Direction.LEFT); break;
+                    Gestion.PersoMove(Direction.LEFT); break;
                 case Keys.Up:
-                    Affichage.PersoMove(Direction.UP); break;
+                    Gestion.PersoMove(Direction.UP); break;
                 case Keys.Right:
-                    Affichage.PersoMove(Direction.RIGHT); break;
+                    Gestion.PersoMove(Direction.RIGHT); break;
                 case Keys.Down:
-                    Affichage.PersoMove(Direction.DOWN); break;
+                    Gestion.PersoMove(Direction.DOWN); break;
                 case Keys.A:
-                    Affichage.ItemAdd(3, 3, "porte1"); break;
+                    Gestion.ItemAdd(new Point(3, 3), "porte1"); break;
                 case Keys.Z:
-                    Affichage.ItemRemove(3, 3); break;
+                    Gestion.ItemRemove(new Point(3, 3)); break;
                 case Keys.E:
-                    Affichage.ItemAdd(4, 4, "GrilleFermee"); break;
+                    Gestion.ItemAdd(new Point(4, 4), "GrilleFermee"); break;
                 case Keys.Q:
-                    Affichage.PlayerAdd("bob", 5, 5); break;
+                    Gestion.PlayerAdd("bob", new Point(5, 5)); break;
                 case Keys.S:
-                    Affichage.PlayerMove("bob", 5, 4); break;
+                    Gestion.PlayerMove("bob", new Point(5, 4)); break;
                 case Keys.D:
-                    Affichage.PlayerRemove("bob"); break;
+                    Gestion.PlayerRemove("bob"); break;
                 case Keys.NumPad0:
                     Affichage.Warfog(0); break;
                 case Keys.NumPad1:
@@ -64,17 +64,22 @@ namespace Laby_GameSERVER
                 case Keys.NumPad4:
                     Affichage.Warfog(4); break;
                 case Keys.D1:
-                    Affichage.PersoTeleport(0, 0); break;
+                    Gestion.PersoTeleport(new Point(0, 0)); break;
                 case Keys.D2:
-                    Affichage.PersoTeleport(1, 1); break;
+                    Gestion.PersoTeleport(new Point(1, 1)); break;
                 case Keys.D3:
-                    Affichage.PersoTeleport(3, 3); break;
+                    Gestion.PersoTeleport(new Point(3, 3)); break;
             }
         }
 
         private void Game_KeyUp(object sender, KeyEventArgs e)
         {
             Affichage.PersoStop();
+        }
+
+        private void GameSERVER_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Liaison.Close();
         }
     }
 }

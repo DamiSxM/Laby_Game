@@ -38,6 +38,7 @@
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Name = "Game";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Game_FormClosing);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Game_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Game_KeyUp);
             this.ResumeLayout(false);
