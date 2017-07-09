@@ -1,10 +1,11 @@
 ﻿using System.Windows.Forms;
 using System.Drawing;
-using Laby_Interfaces;
+/*using Laby_Interfaces;
 using Laby_Maze;
 using Laby_Affichage;
 using Laby_Reseau;
-using Laby_Gestion;
+using Laby_Gestion;*/
+using Labyrinthe;
 
 namespace Laby_Game
 {
@@ -27,6 +28,7 @@ namespace Laby_Game
             Liaison = new Reseau();
 
             Gestion = new Gestion(Labyrinthe, Affichage, Liaison);
+            Gestion.Start();
         }
 
         private void Game_KeyDown(object sender, KeyEventArgs e)
@@ -42,11 +44,11 @@ namespace Laby_Game
                 case Keys.Down:
                     Gestion.PersoMove(Direction.DOWN); break;
                 case Keys.A:
-                    Gestion.ItemAdd(new Point(3, 3), "porte1"); break;
+                    Gestion.ItemAdd(new Point(3, 3), Loot.CRATE); break;
                 case Keys.Z:
                     Gestion.ItemRemove(new Point(3, 3)); break;
                 case Keys.E:
-                    Gestion.ItemAdd(new Point(4, 4), "GrilleFermee"); break;
+                    Gestion.ItemAdd(new Point(4, 4), Loot.COIN); break;
                 case Keys.Q:
                     Gestion.PlayerAdd("bob", new Point(5, 5)); break;
                 case Keys.S:
