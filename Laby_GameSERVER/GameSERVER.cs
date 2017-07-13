@@ -21,7 +21,7 @@ namespace Laby_GameSERVER
 
             Labyrinthe = new Maze(51);
 
-            Affichage = new LabyPanel(Labyrinthe.Labyrinthe);
+            Affichage = new LabyPanel(Labyrinthe);
             Affichage.Location = new Point(0, 0);
             Controls.Add(Affichage);
             
