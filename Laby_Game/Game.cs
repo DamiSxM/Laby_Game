@@ -71,6 +71,16 @@ namespace Laby_Game
                     Gestion.PersoTeleport(new Point(1, 1)); break;
                 case Keys.D3:
                     Gestion.PersoTeleport(new Point(3, 3)); break;
+                case Keys.D4:
+                    Gestion.PersoTeleport(new Point(51, 51)); break;
+                case Keys.D5:
+                    Gestion.PersoTeleport(new Point(50, 50)); break;
+                case Keys.D6:
+                    Gestion.PersoTeleport(new Point(49, 49)); break;
+                case Keys.PageUp:
+                    Gestion.PersoVitesse++; break;
+                case Keys.PageDown:
+                    Gestion.PersoVitesse--; break;
             }
         }
 
