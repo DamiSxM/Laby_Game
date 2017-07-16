@@ -56,15 +56,15 @@ namespace Laby_GameSERVER
                 case Keys.D:
                     Gestion.PlayerRemove("bob"); break;
                 case Keys.NumPad0:
-                    Affichage.Warfog(0); break;
+                    Affichage.WarfogSet(0); break;
                 case Keys.NumPad1:
-                    Affichage.Warfog(1); break;
+                    Affichage.WarfogSet(1); break;
                 case Keys.NumPad2:
-                    Affichage.Warfog(2); break;
+                    Affichage.WarfogSet(2); break;
                 case Keys.NumPad3:
-                    Affichage.Warfog(3); break;
+                    Affichage.WarfogSet(3); break;
                 case Keys.NumPad4:
-                    Affichage.Warfog(4); break;
+                    Affichage.WarfogSet(4); break;
                 case Keys.D1:
                     Gestion.PersoTeleport(new Point(0, 0)); break;
                 case Keys.D2:
